@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Терминал</string>
+    <string name="terminal_close">Закрыть</string>
+    <string name="terminal_disconnected">Соединение потеряно. Переподключение…</string>
+    <string name="terminal_read_only">Терминал только для чтения</string>
+    <string name="terminal_exited">Терминал завершён: %1$s</string>
+    <string name="terminal_error">Терминал недоступен или доступ запрещён.</string>
+    <string name="terminal_uncertain">Доставка ввода неизвестна. Повторной отправки не было.</string>
+    <string name="terminal_copy">Копировать вывод</string>
+    <string name="terminal_paste">Вставить</string>
+    <string name="terminal_run">Выполнить код</string>
+    <string name="terminal_confirm">Подтвердите команду и назначение перед отправкой. Вставленный текст может выполнить команды.</string>
+    <string name="terminal_execute">Выполнить</string>
+    <string name="terminal_cancel">Отмена</string>
+    <string name="terminal_input_too_large">Ввод слишком большой. Отправляйте менее 64 КиБ за раз.</string>
+</resources>

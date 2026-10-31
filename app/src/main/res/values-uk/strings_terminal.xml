@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Термінал</string>
+    <string name="terminal_close">Закрити</string>
+    <string name="terminal_disconnected">З’єднання втрачено. Повторне підключення…</string>
+    <string name="terminal_read_only">Термінал лише для читання</string>
+    <string name="terminal_exited">Термінал завершено: %1$s</string>
+    <string name="terminal_error">Термінал недоступний або доступ заборонено.</string>
+    <string name="terminal_uncertain">Доставка введення невідома. Повторного надсилання не було.</string>
+    <string name="terminal_copy">Копіювати вивід</string>
+    <string name="terminal_paste">Вставити</string>
+    <string name="terminal_run">Виконати код</string>
+    <string name="terminal_confirm">Підтвердьте команду та призначення перед надсиланням. Вставлений текст може виконати команди.</string>
+    <string name="terminal_execute">Виконати</string>
+    <string name="terminal_cancel">Скасувати</string>
+    <string name="terminal_input_too_large">Введення завелике. Надсилайте менше ніж 64 КіБ за раз.</string>
+</resources>

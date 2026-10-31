@@ -1296,3 +1296,29 @@ sources, its exact thread grant, 10 MiB/40 MP limits, and credential-free bounde
 HTTP/data reads. No shared-library change is necessary for this implementation and no
 shared checkout or pinned binary was modified. Native signed-grant tests are present,
 but require the separately built host JNI library to execute on the JVM.
+
+## P15 — Android terminal context/output helpers (AAR 0.3.6)
+
+Verified against AAR SHA-256
+`5e44c1ef846f27b7f131ca3bbacb771f21ce70028f061014904064e4caf9e21d` and
+source `86819eb442ae4a8635cb21206f2195343c75b094`:
+
+- terminal::context binding is absent in AAR 0.3.6.
+- terminal::Output binding is absent in AAR 0.3.6.
+- `T3Api.Terminal.open/write/resize/attach` **are present**. No replacement RPC,
+  REST endpoint or Kotlin protocol implementation is requested.
+
+Expose the existing Rust helpers through the Android domain/execute interface:
+context from shell/thread/fallback and a bounded output projection preserving
+snapshot replacement, cursor deduplication, cleared history and exited/error
+status. Publish fixtures for worktree/project/scratch cwd, provider instance,
+invalid/missing context, initial snapshot, duplicate/out-of-order output, Unicode,
+clear, exit and reconnect without restart. Keep renderer/keyboard code on Android.
+
+Separate server requirement: the current `terminal.attach` contract demands
+`terminal:operate` and may launch a process. It cannot fulfill a read-only token
+terminal view. Add an authorized observation-only subscription that cannot start,
+restart, write or resize a shell; expose it in the typed Android bindings. Never
+borrow the Desktop owner's session for mobile observation. P15 remains blocked;
+see `docs/verification/p15-terminal.md` for the reachable diagnostic and acceptance
+items that remain unimplemented.

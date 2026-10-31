@@ -114,7 +114,7 @@ object ThreadScreenTags {
 }
 
 @Composable
-fun ThreadScreen(viewModel: ThreadViewModel, onBack: () -> Unit, modifier: Modifier = Modifier, quotaStrip: @Composable () -> Unit = {}, onGit: (() -> Unit)? = null, onChanges: (() -> Unit)? = null, onOpenThread: ((String) -> Unit)? = null, onOpenReferenceThread: ((String, String) -> Unit)? = null) {
+fun ThreadScreen(viewModel: ThreadViewModel, onBack: () -> Unit, modifier: Modifier = Modifier, quotaStrip: @Composable () -> Unit = {}, onGit: (() -> Unit)? = null, onChanges: (() -> Unit)? = null, onOpenThread: ((String) -> Unit)? = null, onOpenReferenceThread: ((String, String) -> Unit)? = null, onTerminal: (() -> Unit)? = null, onRunCode: ((String) -> Unit)? = null) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val checkpoint by viewModel.checkpoint.collectAsStateWithLifecycle()
     val checkpointMessages by viewModel.checkpointMessages.collectAsStateWithLifecycle()
@@ -137,7 +137,7 @@ fun ThreadScreen(viewModel: ThreadViewModel, onBack: () -> Unit, modifier: Modif
     val mathRendering by androidx.compose.ui.platform.LocalContext.current.devGraph().mathRenderingEnabled.collectAsStateWithLifecycle()
     ReaderReferenceHost(imageConnection, state.view.threadId, viewModel.localEnvironmentId, graph,
         { environment, thread -> if (onOpenReferenceThread != null) onOpenReferenceThread(environment, thread) else if (environment == viewModel.localEnvironmentId) onOpenThread?.invoke(thread) }) {
-    androidx.compose.runtime.CompositionLocalProvider(LocalRegistryTransport provides imageConnection?.transport, LocalLiveInspector provides LiveInspector(imageConnection) { viewModel.isImageConnectionCurrent(imageConnection) }, LocalReaderCheckpoint provides ReaderCheckpoint(checkpointMessages, viewModel::previewCheckpoint), LocalReaderTimeFormat provides clientSettings.optString("timestampFormat", "locale"), LocalReaderReview provides if (viewModel.durableComposerAvailable) ReaderReviewSettings(diffSettings, graph::setDiffReviewSettings) else ReaderReviewSettings(), LocalReaderMath provides mathRendering, LocalReaderStreaming provides state.view.working, LocalReaderImages provides ReaderImages(imageConnection, { viewModel.isImageConnectionCurrent(imageConnection) }, owner = viewModel.imageOwner(imageConnection), read = viewModel::readImage)) {
+    androidx.compose.runtime.CompositionLocalProvider(dev.avillagran.ot3android.ui.thread.rendering.LocalCodeActions provides dev.avillagran.ot3android.ui.thread.rendering.CodeActions(run = onRunCode?.let { run -> { block: org.json.JSONObject -> run(block.getString("command")) } }), LocalRegistryTransport provides imageConnection?.transport, LocalLiveInspector provides LiveInspector(imageConnection) { viewModel.isImageConnectionCurrent(imageConnection) }, LocalReaderCheckpoint provides ReaderCheckpoint(checkpointMessages, viewModel::previewCheckpoint), LocalReaderTimeFormat provides clientSettings.optString("timestampFormat", "locale"), LocalReaderReview provides if (viewModel.durableComposerAvailable) ReaderReviewSettings(diffSettings, graph::setDiffReviewSettings) else ReaderReviewSettings(), LocalReaderMath provides mathRendering, LocalReaderStreaming provides state.view.working, LocalReaderImages provides ReaderImages(imageConnection, { viewModel.isImageConnectionCurrent(imageConnection) }, owner = viewModel.imageOwner(imageConnection), read = viewModel::readImage)) {
         ThreadContent(
             state = state,
             editorIdentity = viewModel.editorIdentity,
@@ -166,6 +166,7 @@ fun ThreadScreen(viewModel: ThreadViewModel, onBack: () -> Unit, modifier: Modif
             onQuestionResponse = viewModel::respondQuestion,
             onRuntimeMode = viewModel::selectRuntimeMode,
             composerSlot = if (viewModel.durableComposerAvailable) ({ ConnectedComposer(viewModel, state) }) else null,
+            onTerminal = onTerminal,
             onGit = onGit,
             onChanges = onChanges,
             onOpenThread = onOpenThread,
@@ -210,6 +211,7 @@ fun ThreadContent(
     editorIdentity: String = state.view.threadId,
     onDraftChangeTagged: ((String, String) -> Unit)? = null,
     onReadingPosition: (dev.avillagran.ot3android.core.data.prefs.ReadingPosition) -> Unit = {},
+    onTerminal: (() -> Unit)? = null,
 ) {
     val snackbar = remember { SnackbarHostState() }
     val notice = state.notice
@@ -316,6 +318,9 @@ fun ThreadContent(
                         }, modifier = Modifier.testTag("thread_overflow"))
                         androidx.compose.material3.DropdownMenu(expanded = quotaMenu, onDismissRequest = { quotaMenu = false }) {
                             if (showComposerOptions) Box(Modifier.width(320.dp).testTag("composer_overflow_options")) { toolbar() }
+                            if (onTerminal != null) androidx.compose.material3.DropdownMenuItem(
+                                text = { Text(stringResource(R.string.terminal_title)) },
+                                onClick = { quotaMenu = false; onTerminal() })
                             if (onGit != null) androidx.compose.material3.DropdownMenuItem(
                                 text = { Text(stringResource(R.string.ot3_git_title)) },
                                 onClick = { quotaMenu = false; onGit() })

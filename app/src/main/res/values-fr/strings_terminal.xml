@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Fermer</string>
+    <string name="terminal_disconnected">Déconnecté. Reconnexion…</string>
+    <string name="terminal_read_only">Terminal en lecture seule</string>
+    <string name="terminal_exited">Terminal terminé : %1$s</string>
+    <string name="terminal_error">Terminal indisponible ou autorisation refusée.</string>
+    <string name="terminal_uncertain">La livraison de la saisie est incertaine. Aucun nouvel envoi.</string>
+    <string name="terminal_copy">Copier la sortie</string>
+    <string name="terminal_paste">Coller</string>
+    <string name="terminal_run">Exécuter le code</string>
+    <string name="terminal_confirm">Confirmez la commande et la destination avant l’envoi. Le texte collé peut exécuter des commandes.</string>
+    <string name="terminal_execute">Exécuter</string>
+    <string name="terminal_cancel">Annuler</string>
+    <string name="terminal_input_too_large">La saisie est trop volumineuse. Envoyez moins de 64 Kio à la fois.</string>
+</resources>

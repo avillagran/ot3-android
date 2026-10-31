@@ -118,6 +118,20 @@ class NativeT3Transport(
         awaitClose { subscription.close() }
     }.buffer(0).flowOn(io)
 
+    override fun terminalStream(observe: Boolean, args: JSONObject): Flow<T3Batch> = channelFlow {
+        val subscription = client.subscribeFn(if (observe) "terminal.observe" else "terminal.attach", args)
+        launch {
+            try {
+                while (isActive) {
+                    val batch = subscription.poll(POLL_TIMEOUT_MS)
+                    if (batch.items.length() > 0 || batch.closed) send(batch)
+                    if (batch.closed) break
+                }
+            } finally { channel.close() }
+        }
+        awaitClose { subscription.close() }
+    }.buffer(0).flowOn(io)
+
     override suspend fun shell(): JSONObject = request(SHELL_PATH) as JSONObject
 
     /** A GET on the connected environment, as `T3Client.request`; tests only, the UI uses [shell]. */

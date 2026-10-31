@@ -78,6 +78,10 @@ interface T3Transport : DomainCalls, Closeable {
     suspend fun document(resource: JSONObject): JSONObject = throw UnsupportedOperationException("document")
     fun commandOutput(reference: JSONObject): Flow<T3Batch> = throw UnsupportedOperationException("commandOutput")
 
+    /** Cold terminal subscription. Observation uses terminal.observe; cancellation closes the stream. */
+    fun terminalStream(observe: Boolean, args: JSONObject): Flow<T3Batch> =
+        throw UnsupportedOperationException("terminalStream")
+
     /**
      * The environment's shell (projects and thread rows) as one HTTP snapshot, with the
      * orchestration protocol header the lib adds. [shellStream] keeps it current.

@@ -14,7 +14,7 @@ import org.junit.Test
 /**
  * The real Rust core through the AAR's adapter and the host JNI library; no network.
  *
- * The exact pins (0.3.6, 124 functions, 13 streams, 124 domain functions) are intentional: bumping
+ * The exact pins (0.3.7, 125 functions, 14 streams, 127 domain functions) are intentional: bumping
  * libs/lib-t3-rust.lock must fail here until the lib's changes are read and the pins move
  * with them (docs/DECISIONS.md).
  */
@@ -38,9 +38,9 @@ class NativeSmokeTest {
         val capabilities = transport.capabilities()
 
         assertEquals(3, capabilities.getInt("abiVersion"))
-        assertEquals("0.3.6", capabilities.getString("libraryVersion"))
-        assertEquals(124, capabilities.getInt("functions"))
-        assertEquals(124, capabilities.getInt("domainFunctions"))
+        assertEquals("0.3.7", capabilities.getString("libraryVersion"))
+        assertEquals(125, capabilities.getInt("functions"))
+        assertEquals(127, capabilities.getInt("domainFunctions"))
         val operations = capabilities.getJSONArray("operations").strings()
         assertEquals(operations.toString(), 24, operations.size)
         assertTrue(operations.toString(), operations.containsAll(listOf("call", "describe", "domain", "wakeSubscriptions")))
@@ -50,14 +50,14 @@ class NativeSmokeTest {
     fun describeListsTheTypedRegistry() = runBlocking {
         val api = transport.describe()
 
-        assertEquals(124, api.getJSONArray("functions").length())
-        assertEquals(13, api.getJSONArray("streams").length())
+        assertEquals(125, api.getJSONArray("functions").length())
+        assertEquals(14, api.getJSONArray("streams").length())
         val domain = api.getJSONArray("domain")
-        assertEquals(124, domain.length())
+        assertEquals(127, domain.length())
         val names = List(domain.length()) { domain.getJSONObject(it).getString("fn") }
         assertTrue(names.toString(), names.containsAll(listOf("projection.apply", "timeline.view", "sidebar.view", "projects.identity", "awareness.view")))
         val modules = names.groupingBy { it.substringBefore('.') }.eachCount()
-        assertEquals(modules.toString(), 33, modules.size)
+        assertEquals(modules.toString(), 34, modules.size)
         assertEquals(
             mapOf(
                 "diffReview" to 2, "toolInspector" to 4, "planWorkflow" to 5, "checkpointRevert" to 8, "usageSummary" to 3,

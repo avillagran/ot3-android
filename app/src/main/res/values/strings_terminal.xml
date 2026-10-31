@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Close</string>
+    <string name="terminal_disconnected">Disconnected. Reconnecting…</string>
+    <string name="terminal_read_only">Read-only terminal</string>
+    <string name="terminal_exited">Terminal exited: %1$s</string>
+    <string name="terminal_error">Terminal unavailable or permission denied.</string>
+    <string name="terminal_uncertain">Input delivery is uncertain. It was not retried.</string>
+    <string name="terminal_copy">Copy output</string>
+    <string name="terminal_paste">Paste</string>
+    <string name="terminal_run">Run code</string>
+    <string name="terminal_confirm">Confirm the command and destination before sending. Pasted text may execute commands.</string>
+    <string name="terminal_execute">Execute</string>
+    <string name="terminal_cancel">Cancel</string>
+    <string name="terminal_input_too_large">Input is too large. Send less than 64 KiB at a time.</string>
+</resources>

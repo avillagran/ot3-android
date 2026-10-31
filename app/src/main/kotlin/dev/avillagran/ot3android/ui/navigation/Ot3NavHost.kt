@@ -76,6 +76,7 @@ fun Ot3NavHost(
         bottomBar = {
             if (contentDestination?.hasRoute(Thread::class) != true &&
                 contentDestination?.hasRoute(ThreadGit::class) != true &&
+                contentDestination?.hasRoute(ThreadTerminal::class) != true &&
                 contentDestination?.hierarchy?.any { it.hasRoute(SettingsGraph::class) } != true &&
                 !WindowInsets.isImeVisible) Ot3NavigationBar(navigator, TopTab.of(current.value))
         },

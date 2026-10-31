@@ -56,6 +56,9 @@ interface Ot3Screens {
     fun Git(route: ThreadGit) {}
 
     @Composable
+    fun Terminal(route: ThreadTerminal) {}
+
+    @Composable
     fun Changes(route: ThreadChanges) {}
 
     @Composable
@@ -126,6 +129,7 @@ fun NavGraphBuilder.ot3Graph(screens: Ot3Screens, isTop: (NavBackStackEntry) -> 
                 }
             }
         }
+        composable<ThreadTerminal> { screens.Terminal(it.toRoute()) }
         composable<ThreadGit> { screens.Git(it.toRoute()) }
         composable<ThreadChanges> { screens.Changes(it.toRoute()) }
         composable<NewThread> { entry -> screens.NewChat(entry) }

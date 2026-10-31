@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Lukk</string>
+    <string name="terminal_disconnected">Frakoblet. Kobler til igjen…</string>
+    <string name="terminal_read_only">Skrivebeskyttet terminal</string>
+    <string name="terminal_exited">Terminal avsluttet: %1$s</string>
+    <string name="terminal_error">Terminalen er utilgjengelig eller tilgang er nektet.</string>
+    <string name="terminal_uncertain">Levering av inndata er usikker. Ingen nye forsøk.</string>
+    <string name="terminal_copy">Kopier utdata</string>
+    <string name="terminal_paste">Lim inn</string>
+    <string name="terminal_run">Kjør kode</string>
+    <string name="terminal_confirm">Bekreft kommando og mål før sending. Innlimt tekst kan kjøre kommandoer.</string>
+    <string name="terminal_execute">Kjør</string>
+    <string name="terminal_cancel">Avbryt</string>
+    <string name="terminal_input_too_large">Inndata er for store. Send mindre enn 64 KiB om gangen.</string>
+</resources>

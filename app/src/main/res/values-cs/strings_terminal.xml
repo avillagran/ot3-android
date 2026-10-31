@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminál</string>
+    <string name="terminal_close">Zavřít</string>
+    <string name="terminal_disconnected">Odpojeno. Opětovné připojování…</string>
+    <string name="terminal_read_only">Terminál pouze pro čtení</string>
+    <string name="terminal_exited">Terminál ukončen: %1$s</string>
+    <string name="terminal_error">Terminál není dostupný nebo byl přístup zamítnut.</string>
+    <string name="terminal_uncertain">Doručení vstupu je nejisté. Nebyl opakován.</string>
+    <string name="terminal_copy">Kopírovat výstup</string>
+    <string name="terminal_paste">Vložit</string>
+    <string name="terminal_run">Spustit kód</string>
+    <string name="terminal_confirm">Před odesláním potvrďte příkaz a cíl. Vložený text může spustit příkazy.</string>
+    <string name="terminal_execute">Spustit</string>
+    <string name="terminal_cancel">Zrušit</string>
+    <string name="terminal_input_too_large">Vstup je příliš velký. Odesílejte méně než 64 KiB najednou.</string>
+</resources>

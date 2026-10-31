@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Stäng</string>
+    <string name="terminal_disconnected">Frånkopplad. Återansluter…</string>
+    <string name="terminal_read_only">Skrivskyddad terminal</string>
+    <string name="terminal_exited">Terminalen avslutades: %1$s</string>
+    <string name="terminal_error">Terminalen är inte tillgänglig eller åtkomst nekades.</string>
+    <string name="terminal_uncertain">Indatans leverans är osäker. Inget nytt försök gjordes.</string>
+    <string name="terminal_copy">Kopiera utdata</string>
+    <string name="terminal_paste">Klistra in</string>
+    <string name="terminal_run">Kör kod</string>
+    <string name="terminal_confirm">Bekräfta kommandot och målet före sändning. Inklistrad text kan köra kommandon.</string>
+    <string name="terminal_execute">Kör</string>
+    <string name="terminal_cancel">Avbryt</string>
+    <string name="terminal_input_too_large">Indata är för stora. Skicka mindre än 64 KiB åt gången.</string>
+</resources>

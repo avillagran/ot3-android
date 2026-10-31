@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Sluiten</string>
+    <string name="terminal_disconnected">Verbroken. Opnieuw verbinden…</string>
+    <string name="terminal_read_only">Alleen-lezen terminal</string>
+    <string name="terminal_exited">Terminal afgesloten: %1$s</string>
+    <string name="terminal_error">Terminal niet beschikbaar of toegang geweigerd.</string>
+    <string name="terminal_uncertain">Bezorging van invoer is onzeker. Niet opnieuw geprobeerd.</string>
+    <string name="terminal_copy">Uitvoer kopiëren</string>
+    <string name="terminal_paste">Plakken</string>
+    <string name="terminal_run">Code uitvoeren</string>
+    <string name="terminal_confirm">Bevestig opdracht en bestemming voor verzending. Geplakte tekst kan opdrachten uitvoeren.</string>
+    <string name="terminal_execute">Uitvoeren</string>
+    <string name="terminal_cancel">Annuleren</string>
+    <string name="terminal_input_too_large">De invoer is te groot. Verstuur minder dan 64 KiB per keer.</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Kapat</string>
+    <string name="terminal_disconnected">Bağlantı kesildi. Yeniden bağlanıyor…</string>
+    <string name="terminal_read_only">Salt okunur terminal</string>
+    <string name="terminal_exited">Terminal sonlandı: %1$s</string>
+    <string name="terminal_error">Terminal kullanılamıyor veya izin reddedildi.</string>
+    <string name="terminal_uncertain">Girdinin teslimi belirsiz. Yeniden denenmedi.</string>
+    <string name="terminal_copy">Çıktıyı kopyala</string>
+    <string name="terminal_paste">Yapıştır</string>
+    <string name="terminal_run">Kodu çalıştır</string>
+    <string name="terminal_confirm">Göndermeden önce komutu ve hedefi onaylayın. Yapıştırılan metin komut çalıştırabilir.</string>
+    <string name="terminal_execute">Çalıştır</string>
+    <string name="terminal_cancel">İptal</string>
+    <string name="terminal_input_too_large">Girdi çok büyük. Bir seferde 64 KiB’den az gönderin.</string>
+</resources>

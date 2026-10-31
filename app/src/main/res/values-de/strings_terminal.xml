@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Schließen</string>
+    <string name="terminal_disconnected">Getrennt. Verbindung wird hergestellt…</string>
+    <string name="terminal_read_only">Schreibgeschütztes Terminal</string>
+    <string name="terminal_exited">Terminal beendet: %1$s</string>
+    <string name="terminal_error">Terminal nicht verfügbar oder Berechtigung verweigert.</string>
+    <string name="terminal_uncertain">Die Eingabe wurde möglicherweise zugestellt. Kein erneuter Versuch.</string>
+    <string name="terminal_copy">Ausgabe kopieren</string>
+    <string name="terminal_paste">Einfügen</string>
+    <string name="terminal_run">Code ausführen</string>
+    <string name="terminal_confirm">Befehl und Ziel vor dem Senden bestätigen. Eingefügter Text kann Befehle ausführen.</string>
+    <string name="terminal_execute">Ausführen</string>
+    <string name="terminal_cancel">Abbrechen</string>
+    <string name="terminal_input_too_large">Die Eingabe ist zu groß. Sende weniger als 64 KiB auf einmal.</string>
+</resources>

@@ -147,3 +147,6 @@ data class HostMaintenance(val page: String, val environmentId: String? = null, 
 
 @Serializable
 data class ThreadGit(val environmentId: String, val threadId: String)
+
+@kotlinx.serialization.Serializable
+data class ThreadTerminal(val environmentId: String, val threadId: String, val command: String? = null)

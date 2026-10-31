@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">الطرفية</string>
+    <string name="terminal_close">إغلاق</string>
+    <string name="terminal_disconnected">انقطع الاتصال. جارٍ إعادة الاتصال…</string>
+    <string name="terminal_read_only">طرفية للقراءة فقط</string>
+    <string name="terminal_exited">انتهت الطرفية: %1$s</string>
+    <string name="terminal_error">الطرفية غير متاحة أو الإذن مرفوض.</string>
+    <string name="terminal_uncertain">تسليم الإدخال غير مؤكد. لم تتم إعادة المحاولة.</string>
+    <string name="terminal_copy">نسخ المخرجات</string>
+    <string name="terminal_paste">لصق</string>
+    <string name="terminal_run">تشغيل الشفرة</string>
+    <string name="terminal_confirm">أكد الأمر والوجهة قبل الإرسال. قد ينفذ النص الملصق أوامر.</string>
+    <string name="terminal_execute">تنفيذ</string>
+    <string name="terminal_cancel">إلغاء</string>
+    <string name="terminal_input_too_large">الإدخال كبير جدًا. أرسل أقل من 64 KiB في المرة الواحدة.</string>
+</resources>

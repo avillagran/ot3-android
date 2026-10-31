@@ -1,8 +1,9 @@
-# Desktop parity status — dependency adoption 0.3.6
+# Desktop parity status — dependency adoption and terminal 0.3.7
 
-Consumer pins updated 2026-10-31: lib-t3-rust v0.3.6 / 86819eb442ae4a8635cb21206f2195343c75b094,
+Consumer pins updated 2026-10-31: lib-t3-rust v0.3.7 / 7cbad5d8198d37e9ded767d33ac03f2cf15875f4,
 OmaBridge cd0de3a83d0c12ed324c8b580e5f67c8f3e0aff9 (mobile ABI 1).
-The detailed P20 table below is the earlier v0.3.5 audit. The adoption table here
+The adoption table retains the v0.3.6 consumer scope; P15 below records the
+v0.3.7 terminal delivery. The detailed P20 table otherwise retains the earlier v0.3.5 audit. The adoption table here
 supersedes its claims that these native APIs are missing; incomplete consumer
 wiring is now an **O3-Android** task, not a lib/bridge blocker.
 
@@ -48,7 +49,7 @@ A passed fixture is not evidence of a live host mutation or complete Desktop par
 | P12 Pull requests | Partial | Read views plus native comment/review/merge/close/reopen writes; unknown-write receipt persists across route re-entry/process restart. | **O3-Android**: finish diff paging/rendering; native list merge is now wired. **O3-Android**: stack badge selector, link/unlink/watch/unwatch command/receipt UI, inline review/reviewers/labels and verified unknown-receipt reconciliation. See `core/pullrequests/P12_INTEGRATION.md`. |
 | P13 Connections / OmaBridge | Partial | Saved environments, pairing/enrollment and SDK identity. | **avillagran/omabridge / lib-t3-rust**: release per-peer consent, all-host invitation issuance, approvals/publishing/relay/gateway administration and route/share preferences. **O3-Android**: bind only advertised administrative contracts. See `ui/settings/connections/P13-SDK-GAPS.md`. |
 | P14 Browser / documents / devices | Blocked | No merged `ui/workspace` page. Integrations/visual-runtime entrypoints hidden. | **omarchy-t3-code host + lib-t3-rust**: authenticated bounded browser/document/device sessions, frames/input ; U35 references are released, with consumer routing pending. **O3-Android**: implement exported workspace/integrations module, then navigation consumers. |
-| P15 Terminal | Blocked | P11 can deliver a native script; no terminal reader page. | **lib-t3-rust / omarchy-t3-code host**: authenticated PTY read/write/resize/reconnect contract and exit observation. **O3-Android**: implement terminal page, ANSI/UTF-8/IME and code-run consumer. No phone-local shell. |
+| P15 Terminal | Partial | Real host/thread PTY; v0.3.7 native context/output; operate attach and distinct read-only observe; bounded persistent ANSI/Unicode screen, IME/key row, copy/paste, serialized resize, resume/snapshot replacement, exit/close and confirmed native code-run. | Implementation and fixtures delivered. Live-host shell/TUI, OEM IME, accessibility and RTL visual acceptance remain unverified; text terminal excludes graphics/mouse and scrollback paragraph reflow. See `p15-terminal.md`. |
 | P16 Dictation / screenshots | Blocked | No merged capture page. | **O3-Android**: implement consent/permission/cancel/recovery and attachment callbacks; **omarchy-t3-code host + lib-t3-rust**: expose host transcription/model lifecycle/capture when choosing the remote path. |
 | P17 Memory / maintenance | Partial | Explicit-host Storage policy/report/manual cleanup, Archive restore/delete, schedules editing/enable/run/delete, existing-project session import and process/history/signal pages. | **omarchy-t3-code host + lib-t3-rust**: mobile contracts for idle-release/automatic-compaction workers, vault rollout/sync/conflicts, host-sync and local build cleanup/low-disk monitoring. **O3-Android**: real P06 creation recipe for new schedules/missing-project imports and host-assisted receipt reconciliation. Memory/vault/host-sync and absent creation callbacks are hidden. See `ui/settings/maintenance/P17_GAPS.md`. |
 | P18 Usage / notifications | Partial | Usage periods/totals, individual quota reports/refresh; four notification modes, batched sound, channel/permission handling already wired. | **O3-Android**: consume released U26 pools/earliest reset/pace/ambiguity; redemption is not exposed by this contract. **O3-Android**: Desktop chime assets and Doze/OEM/DND/live-auth acceptance. See `ui/usage/P18.md`. |
@@ -69,7 +70,7 @@ A passed fixture is not evidence of a live host mutation or complete Desktop par
   Text-only rollback never claims to recover attachments. New attachment imports are blocked
   while this thread has an unresolved rollback.
 - Live tool output and authenticated PR file diff are reachable. Inline review and PR linked-thread/stack actions remain pending. Document links open a real bounded text viewer.
-- Mermaid, QML/HTML, browser/device/terminal/code-run/capture: absent runtime or page consumers.
+- Mermaid, QML/HTML, browser/device/capture: absent runtime or page consumers. Terminal/code-run now have consumers; see P15.
 - Composer recall/completion and automatic shared thread drafts are reachable. New-chat shared identity, plan/background/send-and-new receipt integration remain pending. Automatic replay is limited to exact conditional shared-draft commands; orchestration sends remain local and explicit.
 
 Unsupported route types remain for serialized compatibility and navigation test fakes;

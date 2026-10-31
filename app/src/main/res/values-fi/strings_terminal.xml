@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Pääte</string>
+    <string name="terminal_close">Sulje</string>
+    <string name="terminal_disconnected">Yhteys katkesi. Yhdistetään uudelleen…</string>
+    <string name="terminal_read_only">Vain luku -pääte</string>
+    <string name="terminal_exited">Pääte sulkeutui: %1$s</string>
+    <string name="terminal_error">Pääte ei ole käytettävissä tai käyttö estettiin.</string>
+    <string name="terminal_uncertain">Syötteen toimitus on epävarma. Ei uutta yritystä.</string>
+    <string name="terminal_copy">Kopioi tuloste</string>
+    <string name="terminal_paste">Liitä</string>
+    <string name="terminal_run">Suorita koodi</string>
+    <string name="terminal_confirm">Vahvista komento ja kohde ennen lähettämistä. Liitetty teksti voi suorittaa komentoja.</string>
+    <string name="terminal_execute">Suorita</string>
+    <string name="terminal_cancel">Peruuta</string>
+    <string name="terminal_input_too_large">Syöte on liian suuri. Lähetä alle 64 KiB kerrallaan.</string>
+</resources>

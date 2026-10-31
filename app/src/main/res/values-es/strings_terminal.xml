@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_close">Cerrar</string>
+    <string name="terminal_disconnected">Desconectado. Reconectando…</string>
+    <string name="terminal_read_only">Terminal de solo lectura</string>
+    <string name="terminal_exited">Terminal finalizado: %1$s</string>
+    <string name="terminal_error">Terminal no disponible o permiso denegado.</string>
+    <string name="terminal_uncertain">La entrega de la entrada es incierta. No se reintentó.</string>
+    <string name="terminal_copy">Copiar salida</string>
+    <string name="terminal_paste">Pegar</string>
+    <string name="terminal_run">Ejecutar código</string>
+    <string name="terminal_confirm">Confirma el comando y el destino antes de enviar. El texto pegado puede ejecutar comandos.</string>
+    <string name="terminal_execute">Ejecutar</string>
+    <string name="terminal_cancel">Cancelar</string>
+    <string name="terminal_input_too_large">La entrada es demasiado grande. Envía menos de 64 KiB a la vez.</string>
+</resources>

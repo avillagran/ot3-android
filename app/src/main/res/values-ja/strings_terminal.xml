@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">ターミナル</string>
+    <string name="terminal_close">閉じる</string>
+    <string name="terminal_disconnected">切断されました。再接続中…</string>
+    <string name="terminal_read_only">読み取り専用ターミナル</string>
+    <string name="terminal_exited">ターミナル終了: %1$s</string>
+    <string name="terminal_error">ターミナルを利用できないか、権限がありません。</string>
+    <string name="terminal_uncertain">入力の送信結果は不明です。再送信していません。</string>
+    <string name="terminal_copy">出力をコピー</string>
+    <string name="terminal_paste">貼り付け</string>
+    <string name="terminal_run">コードを実行</string>
+    <string name="terminal_confirm">送信前にコマンドと送信先を確認してください。貼り付けたテキストでコマンドが実行される場合があります。</string>
+    <string name="terminal_execute">実行</string>
+    <string name="terminal_cancel">キャンセル</string>
+    <string name="terminal_input_too_large">入力が大きすぎます。一度に送信する量を64 KiB未満にしてください。</string>
+</resources>

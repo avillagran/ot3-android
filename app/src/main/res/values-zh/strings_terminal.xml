@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">终端</string>
+    <string name="terminal_close">关闭</string>
+    <string name="terminal_disconnected">连接已断开。正在重新连接…</string>
+    <string name="terminal_read_only">只读终端</string>
+    <string name="terminal_exited">终端已退出：%1$s</string>
+    <string name="terminal_error">终端不可用或权限不足。</string>
+    <string name="terminal_uncertain">输入是否送达未知。未重试。</string>
+    <string name="terminal_copy">复制输出</string>
+    <string name="terminal_paste">粘贴</string>
+    <string name="terminal_run">运行代码</string>
+    <string name="terminal_confirm">发送前请确认命令和目标。粘贴的文本可能执行命令。</string>
+    <string name="terminal_execute">执行</string>
+    <string name="terminal_cancel">取消</string>
+    <string name="terminal_input_too_large">输入过大。每次请发送少于64 KiB的内容。</string>
+</resources>

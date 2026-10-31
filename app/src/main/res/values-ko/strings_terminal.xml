@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-kept terminal strings. -->
+<resources>
+    <string name="terminal_title">터미널</string>
+    <string name="terminal_close">닫기</string>
+    <string name="terminal_disconnected">연결이 끊겼습니다. 다시 연결 중…</string>
+    <string name="terminal_read_only">읽기 전용 터미널</string>
+    <string name="terminal_exited">터미널 종료: %1$s</string>
+    <string name="terminal_error">터미널을 사용할 수 없거나 권한이 없습니다.</string>
+    <string name="terminal_uncertain">입력 전달 여부가 불확실합니다. 재시도하지 않았습니다.</string>
+    <string name="terminal_copy">출력 복사</string>
+    <string name="terminal_paste">붙여넣기</string>
+    <string name="terminal_run">코드 실행</string>
+    <string name="terminal_confirm">전송 전에 명령과 대상을 확인하세요. 붙여넣은 텍스트가 명령을 실행할 수 있습니다.</string>
+    <string name="terminal_execute">실행</string>
+    <string name="terminal_cancel">취소</string>
+    <string name="terminal_input_too_large">입력이 너무 큽니다. 한 번에 64 KiB 미만을 전송하세요.</string>
+</resources>
