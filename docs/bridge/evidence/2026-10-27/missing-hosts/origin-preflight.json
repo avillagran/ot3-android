@@ -1,0 +1,16 @@
+{
+  "applicationGraphStarted": false,
+  "authenticatedRequests": false,
+  "environments": [
+    {
+      "savedLabel": "VQ",
+      "savedEnvironmentId": "8b55eaad-3149-443c-953f-afd6dd002666",
+      "scheme": "https",
+      "host": "stream.villagranquiroz.cl",
+      "port": 39670,
+      "publicDescriptorId": "8b55eaad-3149-443c-953f-afd6dd002666",
+      "publicDescriptorLabel": "node",
+      "matchesSavedIdentity": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sourceRevision": "6b7c04ce2d3d0b9072a6ee97d325adec21c9a3a7",
+  "binarySha256": "847156785da4338770eabec237f8d3ecf2fb4034dfbab05c1e2414ac28d96cdd",
+  "build": "release locked offline; completed",
+  "state": "new isolated temporary identity; not a copy of production",
+  "source": "fixed SSH invocation of sanitized desktop connections-view; id/name/enabled and localEnabled only",
+  "firstPoll": {
+    "exitCode": 0,
+    "catalogChanged": true,
+    "revision": 1,
+    "environmentCount": 2,
+    "verifiedEndpointCount": 2,
+    "authorizedClientCount": 0
+  },
+  "secondPoll": {
+    "exitCode": 0,
+    "catalogChanged": false,
+    "revision": 1
+  },
+  "deployed": false,
+  "phoneEnrollmentTested": false
+}
